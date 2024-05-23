@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="./script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="m-10">
+        <button id="dropdown-button" class="ml-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+            Sort By 
+            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+            </svg>
+        </button>
+        <!-- Dropdown menu -->
+        <div id="dropdown-menu" class="absolute z-10 mt-2 ml-4 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-600">
+            <ul id="dropdown-menu-ul" class="py-2 text-sm text-gray-800 dark:text-gray-200" aria-labelledby="dropdown-button">
+            </ul>
+        </div>
+    </div>
+
+    <div class="m-10">
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-200">
+            <thead class="text-m text-gray-700 uppercase bg-gray-200 dark:bg-gray-800 dark:text-gray-100">
+                <tr>
+                    <th scope="col" class="px-6 py-3">
+                        Name
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Category
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Description
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Price
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
