@@ -69,7 +69,7 @@ class LinkedList {
     {
         // When the getTail() is called
         // Here would check if the current #tail that stored is not the latest tail
-        // If yes, update it,
+        // If not, update it,
         // Thus, it would not do the looping everytime, 
         // at the same time, the loop would only check the link starting from the current tail node
         let count = 0;
