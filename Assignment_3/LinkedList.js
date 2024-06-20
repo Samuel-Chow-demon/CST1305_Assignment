@@ -72,8 +72,15 @@ class LinkedList {
         // If not, update it,
         // Thus, it would not do the looping everytime, 
         // at the same time, the loop would only check the link starting from the current tail node
+
+        if (!this.#tail)                // If tail is null, set the head to tail first
+        {
+            this.#setTail(this.#head);
+        }
+        
         let count = 0;
-        while (this.#tail.next != null)
+        while (this.#tail &&
+                this.#tail.next != null)
         {
             this.#setTail(this.#tail.next);
 
@@ -118,7 +125,10 @@ class LinkedList {
         let newNode = new Node(data);
         newNode.next = null;                // the newNode should have next as null to be the tail node
         let currentTail = this.#getTail();  // Get the current tail and update the tail next with newNode
-        currentTail.next = newNode;
+        if (currentTail)                    // If had the Tail
+        {
+            currentTail.next = newNode;
+        }
         this.#setTail(newNode);             // Update the tail by the newNode
         this.#size++;
 
